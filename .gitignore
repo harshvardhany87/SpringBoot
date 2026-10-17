@@ -1,0 +1,18 @@
+# Java
+*.class
+
+# Gradle
+.gradle/
+build/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Database credentials
+**/src/main/resources/application.properties
+
+# Environment files
+.env
+.env.*
