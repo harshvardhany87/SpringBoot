@@ -36,10 +36,15 @@ public class Empcntrl {
         return repo.save(p);
     }
 
-    @DeleteMapping("deleterecords")
+    @DeleteMapping("/deleterecords/{id}")
     public String delrec(@PathVariable("id") int id) {
         repo.deleteById(id);
         return "Successfully Deleted......";
+    }
+
+    @GetMapping("/firstn/{name}")
+    public List<Emp> getByFirstName(@PathVariable("name") String name) {
+        return repo.findByEmployeeName(name);
     }
 
 }
