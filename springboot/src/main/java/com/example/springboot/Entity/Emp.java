@@ -14,8 +14,14 @@ public class Emp {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Integer ID;
+
+    @NotBlank(message = "First Name cannot be empty: ")
     private String First_Name;
+
+    @NotBlank(message = "Last Name cannot be empty: ")
     private String Last_Name;
+
+    @NotBlank(message = "Salary cannot be empty: ")
     private Integer salary;
 
     public int getID() {
