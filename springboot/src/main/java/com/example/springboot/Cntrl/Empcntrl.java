@@ -1,6 +1,8 @@
 package com.example.springboot.Cntrl;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -47,4 +49,19 @@ public class Empcntrl {
         return repo.findByEmployeeName(name);
     }
 
+    @GetMapping("count")
+    public Map<String, Object> getSummmary() {
+        Long total = repo.getTotalEMP();
+        Map<String, Object> result = new HashMap<>();
+        result.put("total", total);
+        return result;
+    }
+
+    @GetMapping("MaxSalary")
+    public Map<String, Object> getMax() {
+        Long mxsal = repo.getMaxSalary();
+        Map<String, Object> result = new HashMap<>();
+        result.put("Maimum salary is: ", mxsal);
+        return result;
+    }
 }

@@ -12,4 +12,10 @@ public interface Emprepo extends JpaRepository<Emp, Integer> {
 
     @Query("SELECT e FROM Emp e WHERE e.First_Name = :name")
     List<Emp> findByEmployeeName(@Param("name") String name);
+
+    @Query(value = "SELECT COUNT(*) FROM  emp_data", nativeQuery = true)
+    Long getTotalEMP();
+
+    @Query(value = "SELECT MAX(salary) FROM  emp_data", nativeQuery = true)
+    Long getMaxSalary();
 }
