@@ -62,7 +62,7 @@ public class Empcntrl {
     public Map<String, Object> getMax() {
         Long mxsal = repo.getMaxSalary();
         Map<String, Object> result = new HashMap<>();
-        result.put("Maimum salary is: ", mxsal);
+        result.put("Maximum salary is: ", mxsal);
         return result;
     }
 }
