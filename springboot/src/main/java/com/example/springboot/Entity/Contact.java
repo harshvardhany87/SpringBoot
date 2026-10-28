@@ -21,7 +21,7 @@ public class Contact {
     }
 
     public void setID(Integer iD) {
-        ID = iD;
+        this.ID = iD;
     }
 
     public String getName() {
@@ -29,7 +29,7 @@ public class Contact {
     }
 
     public void setName(String name) {
-        Name = name;
+        this.Name = name;
     }
 
     public String getMobile() {
@@ -37,7 +37,7 @@ public class Contact {
     }
 
     public void setMobile(String mobile) {
-        Mobile = mobile;
+        this.Mobile = mobile;
     }
 
 }
